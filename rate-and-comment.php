@@ -23,6 +23,7 @@ function rac_install() {
         post_id bigint(20) NOT NULL,
         rac_like mediumint(9) DEFAULT '0' NOT NULL,
         rac_dislike mediumint(9) DEFAULT '0' NOT NULL,
+        twitter_url varchar(255),
         PRIMARY KEY  (id)
     ) $charset_collate;";
 
