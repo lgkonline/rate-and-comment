@@ -5,6 +5,8 @@ You can also define a tweet, so visitors can use Twitter to comment your post.
 
 ![Screenshot](https://raw.githubusercontent.com/lgkonline/rate-and-comment/master/screenshot.png)
 
+# [⬇️ Get the latest release](https://github.com/lgkonline/rate-and-comment/releases/latest)
+
 ## How does it work?
 
 The plugin will create a small table in the WordPress database, where likes, dislikes and tweet IDs will be stored.
