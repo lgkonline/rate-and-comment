@@ -18,3 +18,9 @@ To make sure, a user can not vote multiple times, the plugin uses `localStorage`
 Just download this repository as a ZIP file and install it on the WordPress Dashboard and activate it.
 
 If you want to use the "comment via Twitter" feature, just set the tweet ID on the edit page of a post. The "Comment via Twitter" link will only be visible when you set a tweet ID.
+
+
+## Customize
+
+You can customize this plugin by setting custom CSS and define how the buttons should look like.
+Go to **Settings** > **Discussion**, there you'll find the **Rate And Comment** section.
