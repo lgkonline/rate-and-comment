@@ -41,18 +41,9 @@ function rac_content($content) {
         </div>
 
         <script>
-            var ajaxurl = "<?php echo admin_url("admin-ajax.php"); ?>";
-            var postid = <?php the_ID(); ?>;
-
             jQuery(document).ready(function($) {
-                var racRating;
-
                 var racRateBtns = document.getElementsByClassName("rac-rate-btn");
-                var racLikeBtn = document.getElementById("rac-like-btn");
-                var racDislikeBtn = document.getElementById("rac-dislike-btn");
-
-                var defaultRacRating = { "rac_like": [], "rac_dislike": [] };
-                racRating = localStorage.getItem("rac-rating") ? JSON.parse(localStorage.getItem("rac-rating")) : defaultRacRating;
+                var racRating = localStorage.getItem("rac-rating") ? JSON.parse(localStorage.getItem("rac-rating")) : { "rac_like": [], "rac_dislike": [] };
 
 <?php /* When click on like/dislike, make Ajax post request */ ?>
                 for (var i = 0; i < racRateBtns.length; i++) {
@@ -61,9 +52,9 @@ function rac_content($content) {
                         var action = racRateBtn.getAttribute("data-action");
 
                         racRateBtn.addEventListener("click", function() {
-                            jQuery.post(ajaxurl, {
+                            jQuery.post("<?php echo admin_url("admin-ajax.php"); ?>", {
                                 "action": action,
-                                "post_id": postid,
+                                "post_id": <?php the_ID(); ?>,
                                 "local_rating": JSON.stringify(racRating)
                             }, function(response) { 
                                 var rating = JSON.parse(response);
@@ -71,8 +62,8 @@ function rac_content($content) {
                                 racRating = rating.local_rating;
                                 localStorage.setItem("rac-rating", JSON.stringify(rating.local_rating));
 
-                                racLikeBtn.querySelector(".count").innerText = rating.rac_like;
-                                racDislikeBtn.querySelector(".count").innerText = rating.rac_dislike;
+                                document.querySelector("#rac-like-btn .count").innerText = rating.rac_like;
+                                document.querySelector("#rac-dislike-btn .count").innerText = rating.rac_dislike;
                              });
                         });
                     })(i);
