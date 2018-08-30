@@ -26,3 +26,5 @@ If you want to use the "comment via Twitter" feature, just set the tweet ID on t
 
 You can customize this plugin by setting custom CSS and define how the buttons should look like.
 Go to **Settings** > **Discussion**, there you'll find the **Rate And Comment** section.
+
+<img alt="LGK Logo" src="https://lib.lgkonline.com/favicon.png" width="80px">
