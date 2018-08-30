@@ -1,6 +1,13 @@
 <?php
 /*
-Plugin Name: Rate And Comment
+Plugin Name:    Rate And Comment
+Plugin URI:     https://github.com/lgkonline/rate-and-comment
+Description:    WordPress plugin for a simple like/dislike rating
+Version:        1.0
+Author:         Lars G. Kliesing (LGK)
+Author URI:     https://lgk.io
+License:        MIT
+License URI:    https://raw.githubusercontent.com/lgkonline/rate-and-comment/master/LICENSE
 */
 
 global $rac_db_version;
