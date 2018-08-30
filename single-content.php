@@ -31,12 +31,14 @@ function rac_content($content) {
         <style type="text/css"><?php echo esc_attr($rac_styling); ?></style>
         <?php endif; ?>
 
-        <button class="rac-rate-btn" data-action="rac_like" id="rac-like-btn"><?php echo $rac_like_icon; ?> <span class="count"><?php echo $rating->rac_like;?></span></button>
-        <button class="rac-rate-btn" data-action="rac_dislike" id="rac-dislike-btn"><?php echo $rac_dislike_icon; ?> <span class="count"><?php echo $rating->rac_dislike;?></span></button>
+        <div class="rac-content">
+            <button class="rac-rate-btn" data-action="rac_like" id="rac-like-btn"><?php echo $rac_like_icon; ?> <span class="count"><?php echo $rating->rac_like;?></span></button>
+            <button class="rac-rate-btn" data-action="rac_dislike" id="rac-dislike-btn"><?php echo $rac_dislike_icon; ?> <span class="count"><?php echo $rating->rac_dislike;?></span></button>
 
-        <?php if (isset($rating->tweet_id) && $rating->tweet_id != "") : ?>
-        <a class="rac-comment-link" href="https://twitter.com/intent/tweet?in_reply_to=<?php echo $rating->tweet_id;?>" target="_blank"><?php echo $rac_comment_content; ?></a>
-        <?php endif; ?>
+            <?php if (isset($rating->tweet_id) && $rating->tweet_id != "") : ?>
+            <a class="rac-comment-link" href="https://twitter.com/intent/tweet?in_reply_to=<?php echo $rating->tweet_id;?>" target="_blank"><?php echo $rac_comment_content; ?></a>
+            <?php endif; ?>
+        </div>
 
         <script>
             var ajaxurl = "<?php echo admin_url("admin-ajax.php"); ?>";
