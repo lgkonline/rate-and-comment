@@ -3,7 +3,7 @@
 Plugin Name:    Rate And Comment
 Plugin URI:     https://github.com/lgkonline/rate-and-comment
 Description:    WordPress plugin for a simple like/dislike rating
-Version:        1.0
+Version:        1.0.0
 Author:         Lars G. Kliesing (LGK)
 Author URI:     https://lgk.io
 License:        MIT
@@ -11,7 +11,7 @@ License URI:    https://raw.githubusercontent.com/lgkonline/rate-and-comment/mas
 */
 
 global $rac_db_version;
-$rac_db_version = "1.0";
+$rac_db_version = "1.0.0";
 
 global $wpdb;
 global $rac_table_name;
