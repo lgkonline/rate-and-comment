@@ -9,22 +9,21 @@ You can also define a tweet, so visitors can use Twitter to comment your post.
 
 ## How does it work?
 
-The plugin will create a small table in the WordPress database, where likes, dislikes and tweet IDs will be stored.
-The plugin does not work with personal data. It does only store the like/dislike counts.
+This plugin will create a small table — within the WordPress database — in which likes, dislikes, and Tweet IDs will be stored.
+It does not use any personal data and only stores the like and dislike counts.
 
-To make sure, a user can not vote multiple times, the plugin uses `localStorage` (a cookie). This is client-side, so this will only be saved on the user's device. Of course, a user could easily manipulate this storage, but I don't think that this very critical.
+To make sure a user can not vote multiple times, the plugin uses `localStorage` which is similar to cookies. This is client-side, so this will only be saved on the user's device which allows users to potentially manipulate this identifier which is a critical issue that will be fixed at a later date.
 
-
-## Install
+## Installation
 
 Just download the ZIP file from the release section, install it with the WordPress Dashboard and activate it.
 
 If you want to use the "comment via Twitter" feature, just set the tweet ID on the edit page of a post. The "Comment via Twitter" link will only be visible when you set a tweet ID.
 
 
-## Customize
+## Customization
 
-You can customize this plugin by setting custom CSS and define how the buttons should look like.
+You can customize this plugin by setting custom CSS rules and define how the buttons should look like.
 Go to **Settings** > **Discussion**, there you'll find the **Rate And Comment** section.
 
 <img alt="LGK Logo" src="https://lib.lgkonline.com/favicon.png" width="80px">
